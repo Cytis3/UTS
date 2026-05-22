@@ -8,6 +8,8 @@ namespace App\Models {
      * @property \Illuminate\Support\Carbon|null $updated_at
      * @property \Illuminate\Support\Carbon|null $created_at
      * @property int $id
+     * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Pesanan> $pesanans
+     * @property-read int|null $pesanans_count
      * @method static \Illuminate\Database\Eloquent\Builder<Pelanggan>|Pelanggan whereId($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Pelanggan>|Pelanggan whereCreatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Pelanggan>|Pelanggan whereUpdatedAt($value)
@@ -336,6 +338,10 @@ namespace App\Models {
      * @property \Illuminate\Support\Carbon|null $updated_at
      * @property \Illuminate\Support\Carbon|null $created_at
      * @property int $id
+     * @property-read mixed $hitung_total
+     * @property-read \App\Models\Pelanggan $pelanggan
+     * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Transaksi> $transaksis
+     * @property-read int|null $transaksis_count
      * @method static \Illuminate\Database\Eloquent\Builder<Pesanan>|Pesanan whereId($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Pesanan>|Pesanan whereCreatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Pesanan>|Pesanan whereUpdatedAt($value)
@@ -664,6 +670,7 @@ namespace App\Models {
      * @property \Illuminate\Support\Carbon|null $updated_at
      * @property \Illuminate\Support\Carbon|null $created_at
      * @property int $id
+     * @property-read \App\Models\Pesanan $pesanan
      * @method static \Illuminate\Database\Eloquent\Builder<Transaksi>|Transaksi whereId($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Transaksi>|Transaksi whereCreatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Transaksi>|Transaksi whereUpdatedAt($value)
