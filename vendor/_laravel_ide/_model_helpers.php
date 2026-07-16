@@ -7,10 +7,20 @@ namespace App\Models {
      *
      * @property \Illuminate\Support\Carbon|null $updated_at
      * @property \Illuminate\Support\Carbon|null $created_at
+     * @property mixed $status
+     * @property mixed $tipe_pelanggan
+     * @property string|null $no_telepon
+     * @property string $nama_pelanggan
+     * @property string $kode_pelanggan
      * @property int $id
      * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Pesanan> $pesanans
      * @property-read int|null $pesanans_count
      * @method static \Illuminate\Database\Eloquent\Builder<Pelanggan>|Pelanggan whereId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Pelanggan>|Pelanggan whereKodePelanggan($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Pelanggan>|Pelanggan whereNamaPelanggan($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Pelanggan>|Pelanggan whereNoTelepon($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Pelanggan>|Pelanggan whereTipePelanggan($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Pelanggan>|Pelanggan whereStatus($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Pelanggan>|Pelanggan whereCreatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Pelanggan>|Pelanggan whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Pelanggan>|Pelanggan newModelQuery()
@@ -337,12 +347,28 @@ namespace App\Models {
      *
      * @property \Illuminate\Support\Carbon|null $updated_at
      * @property \Illuminate\Support\Carbon|null $created_at
+     * @property string|null $catatan
+     * @property string|null $metode_pembayaran
+     * @property float $total_harga
+     * @property mixed $status
+     * @property mixed $tipe_pesanan
+     * @property string|null $no_meja
+     * @property string $no_pesanan
+     * @property int $pelanggan_id
      * @property int $id
      * @property-read mixed $hitung_total
      * @property-read \App\Models\Pelanggan $pelanggan
      * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Transaksi> $transaksis
      * @property-read int|null $transaksis_count
      * @method static \Illuminate\Database\Eloquent\Builder<Pesanan>|Pesanan whereId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Pesanan>|Pesanan wherePelangganId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Pesanan>|Pesanan whereNoPesanan($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Pesanan>|Pesanan whereNoMeja($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Pesanan>|Pesanan whereTipePesanan($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Pesanan>|Pesanan whereStatus($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Pesanan>|Pesanan whereTotalHarga($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Pesanan>|Pesanan whereMetodePembayaran($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Pesanan>|Pesanan whereCatatan($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Pesanan>|Pesanan whereCreatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Pesanan>|Pesanan whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Pesanan>|Pesanan newModelQuery()
@@ -669,9 +695,23 @@ namespace App\Models {
      *
      * @property \Illuminate\Support\Carbon|null $updated_at
      * @property \Illuminate\Support\Carbon|null $created_at
+     * @property float $subtotal
+     * @property float $harga_satuan
+     * @property integer $jumlah
+     * @property string|null $kategori_menu
+     * @property string $nama_menu
+     * @property string $kode_menu
+     * @property int $pesanan_id
      * @property int $id
      * @property-read \App\Models\Pesanan $pesanan
      * @method static \Illuminate\Database\Eloquent\Builder<Transaksi>|Transaksi whereId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Transaksi>|Transaksi wherePesananId($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Transaksi>|Transaksi whereKodeMenu($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Transaksi>|Transaksi whereNamaMenu($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Transaksi>|Transaksi whereKategoriMenu($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Transaksi>|Transaksi whereJumlah($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Transaksi>|Transaksi whereHargaSatuan($value)
+     * @method static \Illuminate\Database\Eloquent\Builder<Transaksi>|Transaksi whereSubtotal($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Transaksi>|Transaksi whereCreatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Transaksi>|Transaksi whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Transaksi>|Transaksi newModelQuery()
